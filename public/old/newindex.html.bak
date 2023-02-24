@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="gbk">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP">
+    <meta name="Copyright" content="Tencent">
+    <meta name="Description" content="《胡桃日记》风靡全网的表情包少女七濑胡桃（menhera酱）来啦～从现在起，你们将在《胡桃日记》中开启一段奇妙旅程，每天十分钟，快乐又轻松！">
+    <meta name="Keywords" content="胡桃日记,七濑胡桃,menhera,表情包,胡桃日记预约,胡桃日记,表情包少女,胡桃,七濑胡桃,menhera,有病酱,人来疯酱,七濑木实,七濑太一,line,治愈,养成,陪伴,收集,放置,换装,经营,装扮,二次元,美少女,表情包,桃,女儿,养娃,日系,日本,吃货,旅行,旅行青蛙,剑与远征,小森生活，胡桃日记测试，胡桃日记下载">
+    <title>《胡桃日记》官方网站 -元气少女治愈陪伴手游-腾讯游戏</title>
+    <!-- 设计：因赛| 重构：因赛-dudu | 创建： 2021-03-31-->
+    <script type="text/javascript">
+        (function() {
+            var a = navigator.userAgent;
+            if (-1 != a.indexOf("iPhone") || -1 != a.indexOf("iPad") || -1 != a.indexOf("iPod") || -1 != a.indexOf("Android")) {
+                a = document.referrer;
+                if (-1 < a.indexOf("baidu.com") || -1 < a.indexOf("sogou.com") || -1 < a.indexOf("haosou.com") || -1 < a.indexOf("hao76.com"))
+                    if (a = void 0, window.sessionStorage) sessionStorage.setItem("channel", "seo");
+                    else {
+                        var a = a || 0,
+                            b = "";
+                        0 != a && (b = new Date, b.setTime(b.getTime() + 1E3 * a), b = "; expires=" + b.toGMTString());
+                        document.cookie = "channel=" + escape("seo") + b + "; path=/"
+                    }
+                self.location = "/m/m202007/index.shtml"
+            }
+        })();
+    </script>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- nav -->
+        <link rel="stylesheet" href="../static/css/head.css">
+<div class="head">
+	<div class="head_ul">
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav1','官网首页');">官网首页</a>
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav2','新闻资讯');">新闻资讯</a>
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav3','胡桃礼包');">胡桃礼包</a>
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav4','认识胡桃');">认识胡桃</a>
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav5','胡桃行动指南');">胡桃行动指南</a>
+		<a href="" class="head_nav" onclick="PTTSendClick('link','nav6','胡桃影集');">胡桃影集</a>
+		<a class="icon" href="javascript:void(0)">
+			客服
+            <img class="qr" src="../static/picture/kf.png" alt="二维码">
+        </a>
+        <a href="../v2/cloudgame/game/95233/5ev8spcii924fqza.html" class="head_nav nav7" target="_blank" onclick="PTTSendClick('link','nav7','云游戏3秒畅玩 ');">云游戏3秒畅玩 </a>
+	</div>
+	<a href="javascript:;" class="head_logo" onclick="PTTSendClick('link','logo','logo图');">
+		<img src="../static/picture/bu.png">
+	</a>
+</div>
+<!-- #t6Hl8#67704CB5946E2A38424BE4B590242E31 -->
+        <div class="part kv" id="top">
+            <video class="big-video" id="kv_video" autoplay="autoplay" loop="loop" muted="muted" src="../static/media/kv.mp4" type="video/mp4">
+        </video>
+            <p class="login" id="unlogin">
+                <span>亲爱的用户，请</span><a href="javascript:openDialog('pop1');" onclick="PTTSendClick('link','login','登录');" class="btn-login">【登录】</a>
+            </p>
+            <p class="out" id="logined" style="display: none;">
+                <span>欢迎您，<span id="login_qq_span"></span>
+                </span><a href="javascript:amsCommon.loginOut();" onclick="PTTSendClick('link','out','注销');" class="btn-out">【注销】</a>
+            </p>
+            <div id="spanNotBind_753895" class="spanNotBind">
+                <a href="javascript:amsCommon.bindArea();">【绑定大区】</a>
+            </div>
+            <div id="spanBind_753895" style="display:none" class="spanBind">
+                <span id="system_info_753895"></span>
+                <span id="plat_info_753895"></span>
+                <span id="area_info_753895"></span>
+                <span id="role_info_753895"></span>
+                <a href="javascript:amsCommon.bindArea();">更改绑定</a>
+            </div>
+            <a href="../web201711/main.html" target="_blank" class="btn-logo" onclick="PTTSendClick('link','logo','返回官网');"></a>
+            <!--<div class="slogan"></div>-->
+            <div class="kv-price">
+                <img class="kv-code" src="../static/picture/kv-code.png">
+                <div class="kv-btn">
+                    <a href="../zlkdatasys/mct/d/play.html" class="ios-btn  ios_mct_download_btn" onclick="PTTSendClick('download','kv-btn1','立即下载');"></a>
+                    <a href="../zlkdatasys/mct/d/play.html" class="android-btn android_mct_download_btn" onclick="PTTSendClick('download','kv-btn2','立即下载');"></a>
+                </div>
+                <div class="kv-desc">
+                    <p>胡桃日记&nbsp;版本：1.6.7&nbsp;更新时间：2022.3.24</p>
+                    <p>深圳市腾讯计算机系统有限公司</p>
+                    <div class="kv-link">
+                        <a target="_blank" href="../contract.html" onclick="PTTSendClick('link','link2','查看应用权限');">查看应用权限</a>
+                        <a target="_blank" href="../privacy_guide.html" onclick="PTTSendClick('link','link3','查看隐私权限');">查看APP隐私权限</a>
+                    </div>
+                </div>
+            </div>
+            <div class="kv-bottom"></div>
+            <!--适龄提示-->
+            <div class="kv-icon" onclick="openDialog('pop6');"></div>
+        </div>
+        <div class="part part1" id="page1">
+            <div class="part1-ti">
+                <!-- <img src="//game.gtimg.cn/images/htrj/web202007/index/part1-ti.gif"/> -->
+            </div>
+            <div class="part1-con">
+
+            </div>
+            <div class="swiper">
+                <!-- Swiper -->
+                <div class="swiper-container swiper-container1 swiper-container-horizontal" id="adSwiper">
+                    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-active" style="width: 636px; margin-right: 30px;"><a href="/web202007/news_detail.shtml?newsid=15708272" target="_blank"><img src="../etc/001.jfif" alt="《胡桃日记》小院开张，参与投稿赢万元豪礼"></a></div><div class="swiper-slide swiper-slide-next" style="width: 636px; margin-right: 30px;"><a href="/web202007/news_detail.shtml?newsid=15663021" target="_blank"><img src="../etc/002.jfif" alt="《胡桃日记》新版本“小院物语”定档3月24日！上线惊喜等你预约"></a></div><div class="swiper-slide" style="width: 636px; margin-right: 30px;"><a href="/web202007/news_detail.shtml?newsid=14103333" target="_blank"><img src="../etc/003.png" alt="《胡桃日记》Q&amp;A问答贴，你想知道的都在这里！"></a></div><div class="swiper-slide" style="width: 636px; margin-right: 30px;"><a href="/web202007/news_detail.shtml?newsid=14098223" target="_blank"><img src="../etc/004.png" alt="《胡桃日记》官网预约礼包领取公告"></a></div></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination1 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+            </div>
+            <div class="part1-news">
+                <div class="news-tab">
+                    <a href="javascript:;" class="news-a on" onclick="PTTSendClick('btn','news-a1','最新');" data-newsid="110863">最新</a>
+                    <a href="javascript:;" class="news-a" onclick="PTTSendClick('btn','news-a2','新闻');" data-newsid="110865">新闻</a>
+                    <a href="javascript:;" class="news-a" onclick="PTTSendClick('btn','news-a3','活动');" data-newsid="110866">活动</a>
+                    <a href="javascript:;" class="news-a" onclick="PTTSendClick('btn','news-a4','公告');" data-newsid="110867">公告</a>
+                    <a href="javascript:;" class="news-a" onclick="PTTSendClick('btn','news-a5','攻略');" data-newsid="115531">攻略</a>
+                </div>
+                <div class="news-con">
+                    <div class="news-ul news2 on" style=""><a href="/web202007/news_detail.shtml?newsid=18159822" target="_blank" onclick="PTTSendReport({'action': 'click','targetid': '18159822','targettype':'news', 'from': 'v4'})"><em>?</em><span>最新</span><p class="ti">【胡桃日记】12月6日停服公告</p><p class="time">12-05</p></a><a href="/web202007/news_detail.shtml?newsid=16502895" target="_blank" onclick="PTTSendReport({'action': 'click','targetid': '16502895','targettype':'news', 'from': 'v4'})"><em>?</em><span>最新</span><p class="ti">更新前瞻：庭院新区域开放、“图章册”关卡数值及奖励调整</p><p class="time">05-12</p></a><a href="/web202007/news_detail.shtml?newsid=16268865" target="_blank" onclick="PTTSendReport({'action': 'click','targetid': '16268865','targettype':'news', 'from': 'v4'})"><em>?</em><span>最新</span><p class="ti">五月假日，胡桃陪你！</p><p class="time">04-29</p></a><a href="/web202007/news_detail.shtml?newsid=16016896" target="_blank" onclick="PTTSendReport({'action': 'click','targetid': '16016896','targettype':'news', 'from': 'v4'})"><em>?</em><span>最新</span><p class="ti">来领20抽！《胡桃日记》周年庆派对邀你回家！</p><p class="time">04-15</p></a><a href="/web202007/news_detail.shtml?newsid=15966324" target="_blank" onclick="PTTSendReport({'action': 'click','targetid': '15966324','targettype':'news', 'from': 'v4'})"><em>?</em><span>最新</span><p class="ti">换上新装准备派对 《胡桃日记》周年庆活动来啦！</p><p class="time">04-13</p></a></div>
+                </div>
+                <a href="newslist.html" target="_blank" class="news-more" onclick="PTTSendClick('btn','news-more','更多');"></a>
+            </div>
+        </div>
+        <div class="part part2" id="page2">
+            <div class="part2-ti">
+                <!-- <img src="//game.gtimg.cn/images/htrj/web202007/index/part2-ti.gif"/> -->
+            </div>
+            <div class="part2-cdk">
+                <span>更多礼物可以戳这里兑换</span>
+                <a href="news_detail.html" class="cdk-btn" target="_blank" onclick="PTTSendClick('btn','cdk-btn','CDKEY兑换');">CDKEY兑换</a>
+            </div>
+            <div class="part2-con">
+                <img class="part2-img" src="../static/picture/part2-img.png">
+                <div class="part2-price">
+                    <div class="part2-li">
+                        <img src="../static/picture/part2-price1.png">
+                        <p>钞票x1000<br>（道具）</p>
+                    </div>
+                    <div class="part2-li">
+                        <img src="../static/picture/part2-price2.png">
+                        <p>蛋糕x1<br>（道具）</p>
+                    </div>
+                    <div class="part2-li">
+                        <img src="../static/picture/part2-price3.png">
+                        <p>豪华海鲜饭x1<br>（道具）</p>
+                    </div>
+                    <div class="part2-li">
+                        <img src="../static/picture/part2-price4.png">
+                        <p>暗夜水手服<br>（道具）</p>
+                    </div>
+                </div>
+                <div class="part2-text">
+                    <!--<h4>领取规则</h4>
+				<p>下载游戏并绑定账号即可领取胡桃准备给大家的<br>礼物哦~
+</p>-->
+                </div>
+            </div>
+            <a href="javascript:amsCommon.queryReward();" class="part2-ljlq" onclick="PTTSendClick('btn','part2-ljlq','立即领取');"></a>
+        </div>
+        <div class="part part3" id="page3">
+            <div class="part3-ti">
+                <!-- <img src="//game.gtimg.cn/images/htrj/web202007/index/part3-ti.gif"/> -->
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container swiper-container2 swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(-2490.25px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img3.png">
+                    </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="3" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img4.png">
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="0" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img1.png">
+                    </div>
+                    <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img2.png">
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img3.png">
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img4.png">
+                    </div>
+                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img1.png">
+                    </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 711.5px;">
+                        <img src="../static/picture/part3-img2.png">
+                    </div></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-next2"></div>
+            <div class="swiper-button-prev swiper-button-prev2"></div>
+        </div>
+        <div class="part part4" id="page4">
+            <div class="part4-ti">
+                <a href="javascript:;" class="part4-a" onclick="PTTSendClick('btn','part4-a1','行动指南');"></a>
+                <a href="javascript:;" class="part4-a" onclick="PTTSendClick('btn','part4-a2','胡桃歌单');"></a>
+                <!-- <img src="//game.gtimg.cn/images/htrj/web202007/index/part4-ti.gif"/>
+			<img src="//game.gtimg.cn/images/htrj/web202007/index/part4-ti2.gif"/> -->
+
+            </div>
+            <div class="part4-content">
+                <div class="part4-con part4-one on">
+                    <!--<div class="part4-text">
+					<h4><i></i>人设信息1<i></i></h4>
+					<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+				</div>
+				<div class="part4-text">
+					<h4><i></i>人设信息2<i></i></h4>
+					<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+				</div>
+				<div class="part4-text">
+					<h4><i></i>人设信息3<i></i></h4>
+					<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+				</div>
+				<div class="part4-text">
+					<h4><i></i>人设信息4<i></i></h4>
+					<p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+				</div>-->
+                </div>
+                <div class="part4-con part4-two">
+                    <!-- Swiper -->
+                    <div class="swiper-container swiper-container3 swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2">
+                                <div class="miusc-text">
+                                    <h4><i></i>Out Going<i></i></h4>
+                                    <p>作曲：胡桃</p>
+                                    <p>演唱：胡桃</p>
+                                    <div class="miusc-desc">
+                                        背景小故事: <br>这是胡桃给自己创作的出游必备行进曲
+                                    </div>
+                                </div>
+                                <img class="miusc-img" src="../static/picture/bgm3.png">
+                                <a href="javascript:;" class="part4-bgm" onclick="PTTSendClick('btn','part4-bgm','bgm1');" data-bgm="3"></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0">
+                                <div class="miusc-text">
+                                    <h4><i></i>Mix<i></i></h4>
+                                    <p>作曲：胡桃</p>
+                                    <p>演唱：胡桃</p>
+                                    <div class="miusc-desc">
+                                        背景小故事: <br>这首bgm还有个名字叫歌在哪胡桃在哪
+                                    </div>
+                                </div>
+                                <img class="miusc-img" src="../static/picture/bgm1.png">
+                                <a href="javascript:;" class="part4-bgm" onclick="PTTSendClick('btn','part4-bgm','bgm1');" data-bgm="1"></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1">
+                                <div class="miusc-text">
+                                    <h4><i></i>Good Night<i></i></h4>
+                                    <p>作曲：胡桃</p>
+                                    <p>演唱：胡桃</p>
+                                    <div class="miusc-desc">
+                                        背景小故事: <br>胡桃指定版的休息背景乐
+                                    </div>
+                                </div>
+                                <img class="miusc-img" src="../static/picture/bgm2.png">
+                                <a href="javascript:;" class="part4-bgm" onclick="PTTSendClick('btn','part4-bgm','bgm1');" data-bgm="2"></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="2">
+                                <div class="miusc-text">
+                                    <h4><i></i>Out Going<i></i></h4>
+                                    <p>作曲：胡桃</p>
+                                    <p>演唱：胡桃</p>
+                                    <div class="miusc-desc">
+                                        背景小故事: <br>这是胡桃给自己创作的出游必备行进曲
+                                    </div>
+                                </div>
+                                <img class="miusc-img" src="../static/picture/bgm3.png">
+                                <a href="javascript:;" class="part4-bgm" onclick="PTTSendClick('btn','part4-bgm','bgm1');" data-bgm="3"></a>
+                            </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0">
+                                <div class="miusc-text">
+                                    <h4><i></i>Mix<i></i></h4>
+                                    <p>作曲：胡桃</p>
+                                    <p>演唱：胡桃</p>
+                                    <div class="miusc-desc">
+                                        背景小故事: <br>这首bgm还有个名字叫歌在哪胡桃在哪
+                                    </div>
+                                </div>
+                                <img class="miusc-img" src="../static/picture/bgm1.png">
+                                <a href="javascript:;" class="part4-bgm" onclick="PTTSendClick('btn','part4-bgm','bgm1');" data-bgm="1"></a>
+                            </div></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-next3"></div>
+                    <div class="swiper-button-prev swiper-button-prev3"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="part part5" id="page5">
+            <div class="part5-ti">
+                <!-- <img src="//game.gtimg.cn/images/htrj/web202007/index/part5-ti.gif"/> -->
+            </div>
+            <div class="part5-btn">
+                <a href="javascript:;" class="" onclick="PTTSendClick('btn','part5-btna','视频');"></a>
+                <a href="javascript:;" class="" onclick="PTTSendClick('btn','part5-btnb','原画');"></a>
+            </div>
+            <div class="part5-con">
+                <div class="part5-content on">
+                    <a href="videoslist.html" class="part5-more" target="_blank" onclick="PTTSendClick('btn','vid-more','视频更多');"></a>
+                    <div class="part5-text">
+
+                        <div class="part5-desc">
+                            想知道更多胡桃日常?来这里~<br> 胡桃vlog、胡桃壁纸、胡桃漫画..
+                            <br> 你想要的都在这!
+                            <br>
+                        </div>
+                        <div class="vid-con" id="vid-con" style="opacity: 0.001; transition-property: opacity; transition-duration: 0.5s;"></div>
+
+                    </div>
+                </div>
+                <div class="part5-content">
+                    <a href="videoslist.html" class="part5-more" target="_blank" onclick="PTTSendClick('btn','news-more','原画更多');"></a>
+                    <div class="part5-text">
+
+                        <div class="part5-desc">
+                            想知道更多胡桃日常?来这里~<br> 胡桃vlog、胡桃壁纸、胡桃漫画..
+                            <br> 你想要的都在这!
+                            <br>
+                        </div>
+                        <img class="part5-img" src="../static/picture/part5-img1.png">
+
+                    </div>
+                    <div class="part5-news" style="opacity: 0.001; transition-property: opacity; transition-duration: 0.5s;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="part part6" id="page6">
+            <div class="part6-con">
+                <div class="part6-li">
+                    <img src="../static/picture/code-wx.png">
+                    <p>微信公众号</p>
+                </div>
+                <div class="part6-li">
+                    <img src="../static/picture/code-bz.png">
+                    <p>B站首页</p>
+                </div>
+                <div class="part6-li">
+                    <img src="../static/picture/code-wb.png">
+                    <p>官方微博</p>
+                </div>
+                <div class="part6-li">
+                    <div class="qq-link">
+                        <a href="../cgi-bin/qm/qr.html" onclick="PTTSendClick('btn','link1','官方6群');">876337826</a>
+                        <a href="../cgi-bin/qm/qr1.html" onclick="PTTSendClick('btn','link1','官方7群');">835484478</a>
+                        <a href="../cgi-bin/qm/qr2.html" onclick="PTTSendClick('btn','link1','官方8群');">874207848</a>
+                        <a href="../cgi-bin/qm/qr3.html" onclick="PTTSendClick('btn','link1','官方9群');">874265054</a>
+                        <a href="../cgi-bin/qm/qr4.html" onclick="PTTSendClick('btn','link1','官方10群');">874322363</a>
+                    </div>
+                    <p>官方QQ群</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="gfooter" ieg-logo="1" age="8" dark="1"></div>
+
+    </div>
+
+
+
+    <!--登录弹窗-->
+    <div class="pop pop1" id="pop1">
+        <!--	<a class="pop-wx" href="javascript:amsCommon.loginByWX();" title="微信登录" onclick="PTTSendClick('btn','wxLoginBtn','微信登录');"></a>-->
+        <!--	<a class="pop-qq" href="javascript:amsCommon.loginByQQ();" title="QQ登录" onclick="PTTSendClick('btn','qqLoginBtn','QQ登录');"></a>-->
+        <a class="pop-wx" href="javascript:amsCommon.loginByWX();" title="微信登录" onclick="PTTSendClick('btn','wxLoginBtn','微信登录');"></a>
+        <a class="pop-qq" href="javascript:amsCommon.loginByQQ();" title="QQ登录" onclick="PTTSendClick('btn','qqLoginBtn','QQ登录');"></a>
+
+        <a class="p-close sp t" href="javascript:closeDialog();" title="关闭"></a>
+    </div>
+    <!--绑定角色弹窗-->
+    <div class="pop pop2" id="pop2">
+        <div class="s0">
+            <label>请选择渠道：</label>
+            <select class="area" id="ulinkChannelSelect">
+            <option value="">请选择渠道</option>
+        </select>
+        </div>
+        <div class="s1">
+            <label>请选择系统：</label>
+            <select class="area" id="ulinkSystemSelect">
+            <option value="">请选择系统</option>
+        </select>
+        </div>
+        <div class="s2">
+            <label>角色：</label>
+            <select class="area" id="ulinkRoleSelect">
+			<option value="">请选择角色</option>
+		</select>
+            <!-- select标签不能替换为其它标签 -->
+        </div>
+        <div id="inviteCode" class="s3">
+            <label>邀请码：</label>
+            <input type="text" placeholder="选填" class="invite-code-input">
+        </div>
+        <div id="areaDiv" style="display: none;">
+            <label>大区：</label>
+            <select id="ulinkAreaSelect">
+			<option value="">请选择大区</option>
+		</select>
+            <!-- select标签不能替换为其它标签 -->
+        </div>
+        <div class="error-message display-none" style="color: red;text-align: center" id="ulinkErrorMessage"></div>
+        <a id="ulinkConfirmBtn" href="javascript:closeDialog();" class="btn-comfirm"></a>
+        <a id="ulinkCancelBtn" href="javascript:closeDialog();" class="p-close"></a>
+    </div>
+    <!--领取成功弹窗-->
+    <div class="pop pop3" id="pop3">
+        <a id="" href="javascript:closeDialog();" class="btn-comfirm"></a>
+        <a id="" href="javascript:closeDialog();" class="p-close"></a>
+    </div>
+    <!--领取失败弹窗-->
+    <div class="pop pop4" id="pop4">
+        <a id="" href="javascript:closeDialog();" class="btn-comfirm"></a>
+        <a id="" href="javascript:closeDialog();" class="p-close"></a>
+    </div>
+    <!--复制链接弹窗-->
+    <div class="pop pop5" id="pop5">
+        <p class="copy">
+            https://htrj.qq.com
+        </p>
+        <a id="" href="javascript:closeDialog();" class="btn-copy"></a>
+        <a id="" href="javascript:closeDialog();" class="p-close"></a>
+    </div>
+    <!--适龄提示弹窗-->
+    <div class="pop pop6" id="pop6">
+        <a class="p-close sp t" href="javascript:closeDialog();" title="关闭"></a>
+        <div class="pop6-desc">
+            1）本游戏是一款玩法简单的模拟养成类游戏，适用于年满8周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。<br> 2）本游戏背景、情节简单友好，画面为2D动漫风格，角色设计可爱，场景色彩鲜明，配乐轻快活泼。玩家在游戏中跟少女胡桃一起经历日常生活的点点滴滴，彼此陪伴，共同成长。游戏中没有竞技和对抗内容，没有基于文字和语音等自由聊天的陌生人社交系统，有简单的好友系统和留言板功能。
+            <br> 3）游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理： 游戏中部分玩法和道具需要付费。未满8周岁的用户不能付费；8周岁以上未满16周岁的未成年人用户，单次充值金额不得超过50元人民币，每月充值金额累计不得超过200元人民币；16周岁以上的未成年人用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400元人民币。
+            <br> 未成年人用户每日22点到次日8点不得使用，法定节假日每天不得使用超过3小时，其他时间每天不得使用超过1.5小时。 4）游戏中的时间与现实时间同步，还配有“专注时钟”功能，玩家可以通过“专注时钟”在一定时间内放下手机，与胡桃一同专注学习，在养成角色的同时劳逸结合，培养健康的作息习惯；通过与游戏角色的日常互动和交流，能够引导玩家形成正向积极的情感表达，获取轻松舒适的情感体验。
+            <br>
+        </div>
+    </div>
+    <!--视频-->
+    <div class="mod_layer"></div>
+    <div class="mod_player_box">
+        <div id="mod_player"></div>
+        <span class="close_btn"></span>
+    </div>
+
+
+    <script src="../static/js/milo.js"></script>
+    <script src="../static/js/title.js"></script>
+    <script src="../static/js/foot.js"></script>
+    <script src="../static/js/jquery-1.9.1.min.js"></script>
+    <script src="../static/js/swiper-3.4.2.min.js"></script>
+    <script src="../static/js/reporting.js"></script>
+    <script src="../static/js/txplayer.js"></script>
+    <script src="../static/js/showDialog.min.js"></script>
+    <script src="../static/js/v1.4.js"></script>
+    <script src="../static/js/clipboard.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/ams.js"></script>
+    <script type="text/javascript">
+        //此段代码不能放到外链JS中，
+        var setSite = {
+            siteType: "os",
+            pageType: "main",
+            pageName: "首页",
+            project: "base",
+            osact: "pc"
+        };
+    </script>
+    <script src="../static/js/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+        if (typeof(pgvMain) == 'function') pgvMain();
+    </script>
+    <!--<script src="//gzhcos.qq.com/components/slug-login/v1.0/index.js"></script>-->
+    <!--<script>-->
+    <!--	slugLogin.config({-->
+    <!--		game: 'htrj',-->
+    <!--		platform: {-->
+    <!--			qq: {-->
+    <!--                appid: '101482157', // 腾讯移动游戏或者自己的appid-->
+    <!--            },-->
+    <!--            wxm: {-->
+    <!--                appid: 'wxa817069bb040f860', // 腾讯移动游戏或者自己的appid-->
+    <!--            },-->
+    <!--            wxpc: {-->
+    <!--	          appid: 'wxa17be3a499146f2f',-->
+    <!--	        },-->
+    <!--	        },-->
+    <!--	});-->
+    <!--    // 检查到微信或者手Q平台时自动登录-->
+    <!--    slugLogin.checkLogin().then((res) => {-->
+    <!--      if (!res.isLogin) {-->
+    <!--        slugLogin.login();-->
+    <!--      } else {-->
+    <!--        setCheckInfo(res)-->
+    <!--        getUserInfo()-->
+    <!--      }-->
+    <!--    })-->
+    <!--    function loginWXPC() {-->
+    <!--      slugLogin.login('wxpc');-->
+    <!--    }-->
+    <!--    function loginQQ() {-->
+    <!--      // 或 直接登录也可-->
+    <!--      slugLogin.checkLogin('qq').then((res) => {-->
+    <!--        if (!res.isLogin) {-->
+    <!--          slugLogin.login('qq');-->
+    <!--        } else {-->
+    <!--          setCheckInfo(res)-->
+    <!--          getUserInfo()-->
+    <!--        }-->
+    <!--      })-->
+    <!--    }-->
+    <!--    function logout() {-->
+    <!--      slugLogin.logout();-->
+    <!--      alert('登出成功');-->
+    <!--      location.reload();-->
+    <!--    }-->
+
+
+
+    <!--    function setCheckInfo(data) {-->
+    <!--    	console.log(data)-->
+    <!--    }-->
+
+    <!--    function getUserInfo(platform) {-->
+    <!--      slugLogin.getUserInfo(platform).then((res) => {-->
+    <!--      	console.log(res)-->
+    <!--      	$('.out').show();-->
+    <!--      	$('.login').hide();-->
+    <!--        $('.out span').html(res.nickname);-->
+    <!--      })-->
+    <!--    }-->
+    <!--</script>-->
+
+	<!--<a href="https://smalltool.github.io/" style="display:none;">仿站工具箱</a>-->
+
+
+
+</body></html>

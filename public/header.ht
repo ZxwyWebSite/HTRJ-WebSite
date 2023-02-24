@@ -1,0 +1,20 @@
+<div class="wrapper">
+<link rel="stylesheet" href="/static/css/head.css">
+<div class="head">
+	<div class="head_ul">
+		<a href="/" class="head_nav">官网首页</a>
+		<a href="/#news" class="head_nav">新闻资讯</a>
+		<a href="/#gift" class="head_nav">胡桃礼包</a>
+		<a href="/#htao" class="head_nav">认识胡桃</a>
+		<a href="/#xdzn" class="head_nav">胡桃行动指南</a>
+		<a href="/#photo" class="head_nav">胡桃影集</a>
+		<a class="icon" href="javascript:void(0)">
+			客服
+            <img class="qr" src="/static/picture/kf.png" alt="二维码">
+        </a>
+        <a href="https://www.zxwy.tk/" class="head_nav nav7" target="_blank" rel="nofollow">&nbsp;ZxwyWebSite</a>
+	</div>
+	<a href="javascript:;" class="head_logo" onclick="javascript:window.alert('(*^_^*) 嗷~');">
+		<img src="/static/picture/bu.png">
+	</a>
+</div>

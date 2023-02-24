@@ -1,0 +1,2 @@
+/*返回顶部按钮*/
+.backtop {position: fixed;line-height: 46px;text-align: center;width: 46px;bottom: 62px;height: 46px;cursor: pointer;display: block;border-radius: 6px;box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);font-size: 22px;right: 22px;background-color: rgba(0,0,0,.6);color: #fff;z-index: 10;}

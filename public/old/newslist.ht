@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP">
+    <meta name="Copyright" content="Tencent">
+    <meta name="Description" content="胡桃日记手游官方站点">
+    <meta name="Description" content="《胡桃日记》风靡全网的表情包少女七濑胡桃（menhera酱）来啦～从现在起，你们将在《胡桃日记》中开启一段奇妙旅程，每天十分钟，快乐又轻松！">
+    <meta name="Keywords" content="胡桃日记,七濑胡桃,menhera,表情包,胡桃日记预约,胡桃日记,表情包少女,胡桃,七濑胡桃,menhera,有病酱,人来疯酱,七濑木实,七濑太一,line,治愈,养成,陪伴,收集,放置,换装,经营,装扮,二次元,美少女,表情包,桃,女儿,养娃,日系,日本,吃货,旅行,旅行青蛙,剑与远征,小森生活，胡桃日记测试，胡桃日记下载">
+    <title>《胡桃日记》官方网站 -元气少女治愈陪伴手游-腾讯游戏</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script>
+        (function() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                var a = document.referrer,
+                    b = {
+                        "baidu.com": "seo_baidu",
+                        "sogou.com": "seo_sogou",
+                        "sm.cn": "seo_sm",
+                        "so.com": "seo_360",
+                        "bing.com": "seo_bing",
+                        "google.com": "seo_google"
+                    },
+                    c;
+                for (c in b) {
+                    if (-1 != a.indexOf(c)) {
+                        a = b[c];
+                        if (window.sessionStorage) {
+                            sessionStorage.setItem("channel", a)
+                        } else {
+                            var d = d || 0,
+                                b = "";
+                            0 != d && (b = new Date, b.setTime(b.getTime() + 1000 * d), b = "; expires=" + b.toGMTString());
+                            document.cookie = "channel=" + escape(a) + b + "; path=/"
+                        }
+                        break
+                    }
+                }
+                window.location.href = "/m/m202007/index.shtml" + location.search
+            };
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- nav -->
+        <link rel="stylesheet" href="../static/css/head.css">
+<div class="head">
+	<div class="head_ul">
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav1','官网首页');">官网首页</a>
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav2','新闻资讯');">新闻资讯</a>
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav3','胡桃礼包');">胡桃礼包</a>
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav4','认识胡桃');">认识胡桃</a>
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav5','胡桃行动指南');">胡桃行动指南</a>
+		<a href="index.html" class="head_nav" onclick="PTTSendClick('link','nav6','胡桃影集');">胡桃影集</a>
+		<a class="icon" href="javascript:void(0)">
+			客服
+            <img class="qr" src="../static/picture/kf.png" alt="二维码">
+        </a>
+        <a href="../v2/cloudgame/game/95233/5ev8spcii924fqza.html" class="head_nav nav7" target="_blank" onclick="PTTSendClick('link','nav7','云游戏3秒畅玩 ');">云游戏3秒畅玩 </a>
+	</div>
+	<a href="javascript:;" class="head_logo" onclick="PTTSendClick('link','logo','logo图');">
+		<img src="../static/picture/bu.png">
+	</a>
+</div>
+<!-- #t6Hl8#67704CB5946E2A38424BE4B590242E31 -->
+        <div class="top-bg"></div>
+        <div class="news_con">
+            <div class="map-btn">
+                <a href="index.html" class="home" onclick="PTTSendClick('btn','home','首页');">首页</a> >新闻资讯
+            </div>
+
+            <div class="news_nav2">
+                <a href="javascript:;" class="on" onclick="PTTSendClick('btn','news_nav1','最新');" data-newsid="110863">最新</a>
+                <a href="javascript:;" onclick="PTTSendClick('btn','news_nav2','新闻');" data-newsid="110865">新闻</a>
+                <a href="javascript:;" onclick="PTTSendClick('btn','news_nav3','活动');" data-newsid="110866">活动</a>
+                <a href="javascript:;" onclick="PTTSendClick('btn','news_nav4','公告');" data-newsid="110867">公告</a>
+            </div>
+            <div class="news_content">
+                <div class="news_ul on">
+                    <ul id="news-con">
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="li_con">
+                                <em>&hearts;</em>
+                                <div class="li_licon">
+                                    这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                                </div>
+                                <span class="li_time">
+			            			2020-12-16
+			            		</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="page"></div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="gfooter" ieg-logo="1" age="8" dark="1"></div>
+
+    <script src="../static/js/jquery-1.9.1.min.js"></script>
+    <script src="../static/js/v1.4.js" ></script>
+    <script>
+        //	$('.news_nav2 a').click(function(){
+        //		$(this).addClass('on').siblings().removeClass('on');
+        //		$('.news_ul').eq($(this).index()).addClass('on').siblings().removeClass('on');
+        //	});
+        //公用配置
+        fillNews.setDefault({
+            type: 'iTag',
+            gameID: 273, // 不同游戏不一样，需要咨询内部重构
+            source: 'web_pc' //数据上报用的，表明本页面用于pc或者移动；在gicp建，常见的移动官网是web_m ，PC官网是 web_pc
+        });
+        var newsList = fillNews.list({
+            id: '110863',
+            newsType: 'news',
+            pageSize: 8,
+            detailURL: '/web202007/news_detail.shtml',
+            tpl: '<li><a href="{url}" class="li_con" onclick="PTTSendReport({\'action\': \'click\',\'targetid\': \'{iNewsId}\',\'targettype\':\'news\', \'from\': \'v4\'})"><em>&hearts;</em><div class="li_licon">{sTitle}</div><span class="li_time">{sIdxTimeShort}</span></a></li>',
+            wrap: '#news-con',
+            pager: {
+                wrap: '.page',
+                type: 'laypage',
+                groups: 0
+            },
+            callback: function(result) {
+                for (let i = 0; i < result.data.items.length; i++) {
+                    var idlist = result.data.items[i].iNewsId;
+                    PTTSendReport({
+                        action: 'pop',
+                        targetid: idlist, //支持批量上报，targetid用英文逗号分隔
+                        targettype: "news",
+                        from: 'v4'
+                    });
+                }
+            }
+        });
+        $('.news_nav2 a').click(function() {
+            newsId = $(this).data('newsid');
+            $(this).addClass('on').siblings().removeClass('on');
+            newsList.update({
+                id: newsId,
+                detailURL: '/web202007/news_detail.shtml',
+                tpl: '<li><a href="{url}" class="li_con" onclick="PTTSendReport({\'action\': \'click\',\'targetid\': \'{iNewsId}\',\'targettype\':\'news\', \'from\': \'v4\'})"><em>&hearts;</em><div class="li_licon">{sTitle}</div><span class="li_time">{sIdxTimeShort}</span></a></li>'
+            })
+
+        })
+    </script>
+
+
+    <script src="../static/js/title.js"></script>
+    <script src="../static/js/foot.js"></script>
+    <script src="../static/js/ping_tcss_tgideas_https_min.js"></script>
+    <script>
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性 
+            siteType: "os", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "news", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "新闻列表", //必填项:页面中文名 
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 'pc' //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+
+</html>
+<!-- #t6Hl8#934CA2B8115B232BA5EA21EEC79969D6 -->

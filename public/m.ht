@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="gbk">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <title>请使用电脑访问</title>
+</head>
+<body>
+    <h1>本源码不包含手机端页面，请使用电脑访问。</h1>
+</body>
+</html>

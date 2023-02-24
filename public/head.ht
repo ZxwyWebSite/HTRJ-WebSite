@@ -1,0 +1,25 @@
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="Description" content="[$description]">
+<meta name="Keywords" content="[$keywords]">
+<title>[$title]</title>
+<script type="text/javascript">
+    (function() {
+        var a = navigator.userAgent;
+        if (-1 != a.indexOf("iPhone") || -1 != a.indexOf("iPad") || -1 != a.indexOf("iPod") || -1 != a.indexOf("Android")) {
+            a = document.referrer;
+            if (-1 < a.indexOf("baidu.com") || -1 < a.indexOf("sogou.com") || -1 < a.indexOf("haosou.com") || -1 < a.indexOf("hao76.com"))
+                if (a = void 0, window.sessionStorage) sessionStorage.setItem("channel", "seo");
+                else {
+                    var a = a || 0,
+                        b = "";
+                    0 != a && (b = new Date, b.setTime(b.getTime() + 1E3 * a), b = "; expires=" + b.toGMTString());
+                    document.cookie = "channel=" + escape("seo") + b + "; path=/"
+                }
+            self.location = "/m"
+        }
+    })();
+</script>
+<link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/main.css">

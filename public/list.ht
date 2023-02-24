@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    [$head]
+</head>
+<body>
+    [$header]
+    <div class="top-bg"></div>
+    <div class="news_con">
+        <div class="map-btn">
+            <a href="/" class="home" onclick="">首页</a> >新闻资讯
+        </div>
+        <div class="news_nav2">
+            <a href="javascript:;" class="on" onclick="" data-newsid="110863">最新</a>
+            <a href="javascript:;" onclick="" data-newsid="110865">新闻</a>
+            <a href="javascript:;" onclick="" data-newsid="110866">活动</a>
+            <a href="javascript:;" onclick="" data-newsid="110867">公告</a>
+        </div>
+        <div class="news_content">
+            <div class="news_ul on">
+                <ul id="news-con">
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="li_con">
+                            <em>&hearts;</em>
+                            <div class="li_licon">
+                                这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题
+                            </div>
+                            <span class="li_time">
+                                2020-12-16
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="page"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    [$footer]
+    [$include]
+    <script>
+        //	$('.news_nav2 a').click(function(){
+        //		$(this).addClass('on').siblings().removeClass('on');
+        //		$('.news_ul').eq($(this).index()).addClass('on').siblings().removeClass('on');
+        //	});
+        //公用配置
+        fillNews.setDefault({
+            type: 'iTag',
+            gameID: 273, // 不同游戏不一样，需要咨询内部重构
+            source: 'web_pc' //数据上报用的，表明本页面用于pc或者移动；在gicp建，常见的移动官网是web_m ，PC官网是 web_pc
+        });
+        var newsList = fillNews.list({
+            id: '110863',
+            newsType: 'news',
+            pageSize: 8,
+            detailURL: '/news',
+            tpl: '<li><a href="{url}" class="li_con" onclick=""><em>&hearts;</em><div class="li_licon">{sTitle}</div><span class="li_time">{sIdxTimeShort}</span></a></li>',
+            wrap: '#news-con',
+            pager: {
+                wrap: '.page',
+                type: 'laypage',
+                groups: 0
+            },
+            callback: function(result) {
+                for (let i = 0; i < result.data.items.length; i++) {
+                    var idlist = result.data.items[i].iNewsId;
+                    /*PTTSendReport({
+                        action: 'pop',
+                        targetid: idlist, //支持批量上报，targetid用英文逗号分隔
+                        targettype: "news",
+                        from: 'v4'
+                    });*/
+                }
+            }
+        });
+        $('.news_nav2 a').click(function() {
+            newsId = $(this).data('newsid');
+            $(this).addClass('on').siblings().removeClass('on');
+            newsList.update({
+                id: newsId,
+                detailURL: '/news',
+                tpl: '<li><a href="{url}" class="li_con" onclick=""><em>&hearts;</em><div class="li_licon">{sTitle}</div><span class="li_time">{sIdxTimeShort}</span></a></li>'
+            })
+        })
+    </script>
+    <script>
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性 
+            siteType: "os", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "news", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "新闻列表", //必填项:页面中文名 
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 'pc' //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+</html>

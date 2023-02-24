@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    [$head]
+</head>
+<body>
+    [$header]
+    <div class="top-bg"></div>
+    <div class="news_con">
+        <div class="map-btn">
+            <a href="/" class="home" onclick="">首页</a> ><a href="/list" class="home" onclick="">新闻资讯</a> >详情页
+        </div>
+        <a href="javascript:history.back(-1);" class="back" onclick="">返回</a>
+        <div class="news_container">
+            <div class="newscon-top">
+                <p class="news-ti">这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题</p>
+                <div class="news-desc">
+                    作者：<span>这里是名称</span>&nbsp;&nbsp;&nbsp;时间：<span>2020-07-24</span>
+                </div>
+
+            </div>
+            <div class="news-center">
+                这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容
+                <p>
+                    这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容
+                </p>
+                <p>
+                    这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容
+                </p>
+                <img src="/static/picture/kv.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+    [$footer]
+    [$include]
+    <script>
+        (function() {
+            fillNews.detail({
+                gameID: 273,
+                wrap: '.news_container', // 模板处理完填充进来的容器
+                tpl: '<div class="newscon-top"><p class="news-ti">{sTitle}</p><div class="news-desc">作者：<span>{sAuthor}</span>&nbsp;&nbsp;&nbsp;时间：<span>{sIdxTime}</span></div></div><div class="news-center">{sContent}</div>', // 模板字符串
+                source: 'web_pc', // V4系统的数据上报，需要去GICP后台手动创建
+                callback: function(obj) {
+                    // console.log(obj);
+                }
+            });
+        })();
+    </script>
+    <script>
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        var newsid = GetQueryString("newsid");
+        var type = GetQueryString("type");
+        if (type == 'vid') {
+            $('.map-btn').html('<a href="/" class="home" onclick="">首页</a> ><a href="/list" class="home" onclick="">胡桃影集</a> >详情页')
+        }
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性 
+            siteType: "os", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "detail", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "新闻详情页", //必填项:页面中文名 
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 'pc', //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+            targetId: newsid, //文章id
+            targetType: "news", //文章类型：'news' || 'video' || 'moment' || 'other'
+            from: "v4" //文章出处：'v4'||'ams'||'tgl'||'ingame'||'other'
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+</html>

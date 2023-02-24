@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    [$head]
+</head>
+<body>
+    [$header]
+    <div class="top-bg"></div>
+    <div class="news_con">
+        <div class="map-btn">
+            <a href="/" class="home" onclick="">首页</a> >胡桃影集
+        </div>
+        <div class="news_nav2">
+            <a href="javascript:;" class="on" onclick="">视频</a>
+            <a href="javascript:;" onclick="">原画</a>
+            <a href="javascript:;" onclick="">其他</a>
+        </div>
+        <div class="news_content">
+            <div class="news_ul on">
+                <ul id="vid-ul">
+                    <li class="video-con">
+                        <div class="vid-center">
+                            <a href="javascript:popvideo('h0639yczv8x');" class="vid-btn" onclick=""></a>
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+                    </li>
+                    <li class="video-con">
+                        <div class="vid-center">
+                            <a href="javascript:;" class="vid-btn" onclick=""></a>
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+                    </li>
+                    <li class="video-con">
+                        <div class="vid-center">
+                            <a href="javascript:;" class="vid-btn" onclick=""></a>
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+                    </li>
+                    <li class="video-con">
+                        <div class="vid-center">
+                            <a href="javascript:;" class="vid-btn" onclick=""></a>
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+                    </li>
+                </ul>
+                <div class="page"></div>
+            </div>
+            <div class="news_ul news_bg">
+                <ul id="news1">
+                    <li class="video-con">
+                        <div class="vid-center">
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>胡桃漫画</p>
+                    </li>
+                    <li class="video-con">
+                        <div class="vid-center">
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>胡桃漫画</p>
+                    </li>
+                </ul>
+                <div class="page page2"></div>
+            </div>
+            <div class="news_ul">
+                <ul id="news2">
+                    <li class="video-con">
+                        <div class="vid-center">
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>胡桃漫画</p>
+                    </li>
+                    <li class="video-con">
+                        <div class="vid-center">
+                        </div>
+                        <a href="javascript:;" class="vid_con">
+                        </a>
+                        <p>胡桃漫画</p>
+                    </li>
+                </ul>
+                <div class="page page3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--视频-->
+<div class="mod_layer"></div>
+<div class="mod_player_box">
+    <div id="mod_player"></div>
+    <span class="close_btn"></span>
+</div>
+    [$footer]
+    [$include]
+    <script src="/static/js/dplayer-gbk.min.js"></script>
+    <script>
+        $('.news_nav2 a').click(function() {
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.news_ul').eq($(this).index()).addClass('on').siblings().removeClass('on');
+        });
+        //视频弹窗
+        function popvideo(e) {
+            $('.mod_player_box,.mod_layer').show();
+            /*player = new Txplayer({
+                containerId: 'mod_player',
+                vid: e,
+                width: '100%',
+                height: '100%',
+                autoplay: true,
+                poster: ''
+            });*/
+            player = new DPlayer({
+                container: document.getElementById('mod_player'),
+                autoplay: true,
+                video: {
+                    url: '/static/api/vod/' + e + '.mp4',
+                },
+            });
+        }
+        $('.close_btn').click(function() {
+            $('.mod_player_box,.mod_layer').hide();
+            $('#mod_player').html('');
+            player.pause();
+        })
+        fillNews.setDefault({
+            type: 'iTag',
+            gameID: 273, // 不同游戏不一样，需要咨询内部重构
+            source: 'web_pc' //数据上报用的，表明本页面用于pc或者移动；在gicp建，常见的移动官网是web_m ，PC官网是 web_pc
+        });
+        //视频列表
+        var videoList = fillNews.list({
+            id: '110869',
+            newsType: 'video',
+            pageSize: 4,
+            detailURL: '/news',
+            tpl: '<li class="video-con"><div class="vid-center"><img src="{sCoverMap.One}" alt="{sTitle}"><a href="javascript:popvideo(\'{sVID}\');" class="vid-btn"  onclick=""></a></div><p>{sTitle}</p></li>',
+            wrap: '#vid-ul',
+            pager: {
+                wrap: '.page',
+                type: 'laypage',
+                groups: 0
+            },
+            callback: function(result) {
+                for (let i = 0; i < result.data.items.length; i++) {
+                    var idlist = result.data.items[i].iNewsId;
+                    /*PTTSendReport({
+                        action: 'pop',
+                        targetid: idlist, //支持批量上报，targetid用英文逗号分隔
+                        targettype: "news",
+                        from: 'v4'
+                    });*/
+                }
+            }
+        });
+        //壁纸
+        var newsList = fillNews.list({
+            id: '110871',
+            newsType: 'news',
+            pageSize: 6,
+            detailURL: '/news',
+            tpl: '<li class="video-con"><a href="{url}&type=vid"  onclick=""><div class="vid-center"><img src="{sCoverMap.One}" alt="{sTitle}"></div><p>{sTitle}</p></a></li>',
+            wrap: '#news1',
+            pager: {
+                wrap: '.page2',
+                type: 'laypage',
+                groups: 0
+            },
+            callback: function(result) {
+                for (let i = 0; i < result.data.items.length; i++) {
+                    var idlist = result.data.items[i].iNewsId;
+                    /*PTTSendReport({
+                        action: 'pop',
+                        targetid: idlist, //支持批量上报，targetid用英文逗号分隔
+                        targettype: "news",
+                        from: 'v4'
+                    });*/
+                }
+            }
+        });
+        //漫画
+        var newsList = fillNews.list({
+            id: '110872',
+            newsType: 'news',
+            pageSize: 4,
+            detailURL: '/news',
+            tpl: '<li class="video-con"><a href="{url}&type=vid"  onclick=""><div class="vid-center"><img src="{sCoverMap.One}" alt="{sTitle}"></div><p>{sTitle}</p></a></li>',
+            wrap: '#news2',
+            pager: {
+                wrap: '.page3',
+                type: 'laypage',
+                groups: 0
+            },
+            callback: function(result) {
+                for (let i = 0; i < result.data.items.length; i++) {
+                    var idlist = result.data.items[i].iNewsId;
+                    /*PTTSendReport({
+                        action: 'pop',
+                        targetid: idlist, //支持批量上报，targetid用英文逗号分隔
+                        targettype: "news",
+                        from: 'v4'
+                    });*/
+                }
+            }
+        });
+    </script>
+    <script>
+        //此段代码不能放到外链JS中，
+        var setSite = { //设置网站属性 
+            siteType: "os", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+            pageType: "videoslist", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+            pageName: "视频列表", //必填项:页面中文名 
+            project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+            osact: 'pc' //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+        };
+        if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
+    </script>
+</body>
+</html>
