@@ -57,7 +57,7 @@
         var newsid = GetQueryString("newsid");
         var type = GetQueryString("type");
         if (type == 'vid') {
-            $('.map-btn').html('<a href="/" class="home" onclick="">首页</a> ><a href="/list" class="home" onclick="">胡桃影集</a> >详情页')
+            $('.map-btn').html('<a href="/" class="home" onclick="">首页</a> ><a href="/videos" class="home" onclick="">胡桃影集</a> >详情页')
         }
         //此段代码不能放到外链JS中，
         var setSite = { //设置网站属性 

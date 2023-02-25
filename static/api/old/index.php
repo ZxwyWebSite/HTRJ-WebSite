@@ -1,25 +1,223 @@
 <?php
-//ã€Šèƒ¡æ¡ƒæ—¥è®°å®˜ç½‘ã€‹æ•°æ®Api - PHPç‰ˆ v1.0 ; By Zxwy ; Build 20230223 ; MIT License
-//ç¬¬ä¸€æ¬¡å†™phpï¼Œèƒ½ç”¨å°±è¡Œï¼Œå…ˆä¸è€ƒè™‘å…¶å®ƒé—®é¢˜
-//æ‰§è¡Œæµç¨‹ï¼šè·å–æŸ¥è¯¢å­—ç¬¦ä¸²ä¸­çš„"id"å€¼â†’è¿”å›å¯¹åº”çš„JSæ•°æ®
-//ç”±äºè¦éªŒè¯"r1"ä¸­çš„Statusï¼Œæ‰€ä»¥æ›¿æ¢æœ¬åœ°æ–‡ä»¶ä¸­çš„å˜é‡
-//è·å–ä¼ å…¥å€¼
-$id = $_GET['id'];
-$r1 = $_GET['r1']; //Status
-//å®šä¹‰è¿”å›ç±»å‹
-//header('Content-type: application/javascript');
-header('Content-type: text/plain; charset=utf-8');
-//æ•°æ®æ‹¼æ¥(æœ¬åœ°æ–‡ä»¶)
-$file = $id . '.js';
-//è¿è¡Œ
-if (file_exists($file)) {
-    $str = file_get_contents($file); //å°†æ•´ä¸ªæ–‡ä»¶å†…å®¹è¯»å…¥åˆ°ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­
-    //$str = str_replace("\r\n", null, $str); //å»é™¤æ¢è¡Œç¬¦
-    $str = str_replace('[$r1]',$r1,$str); //æ›¿æ¢Status
-    echo $str;
-} else {
-    echo 'æ­¤é¡µé¢æš‚æœªæ”¶å½•';
+//¡¶ºúÌÒÈÕ¼Ç¹ÙÍø¡· - php°æ±¾ ; By Zxwy ; Ö÷³ÌĞò
+$urlpath = $_SERVER['PHP_SELF']; //·ÃÎÊÂ·¾¶
+$path = str_replace('/index.php', null, $urlpath); //È¥³ıurlpathÖĞµÄphpÎÄ¼şÃû
+header('Content-type: text/html;charset=gbk'); //¶¨Òå·µ»ØÀàĞÍ
+
+//2023-02-24 ÖØĞ´Ä£¿é£¬ÖØ¹¹Âß¼­£¬ÓÅ»¯Ö´ĞĞĞ§ÂÊ
+switch ($path) {
+    case '': //Ö÷Ò³Ä£¿é
+    case '/':
+        include('setting.php'); //ÒıÈëÍøÒ³±äÁ¿
+        $pindex = 'public/newindex.ht'; //indexÄ£°åÂ·¾¶
+        if (file_exists($pindex)) {
+            $index = file_get_contents($pindex); //ÔØÈë
+            $index = str_replace('[$head]', $head, $index); //Ìæ»»headÄ£°å
+            $index = str_replace('[$footer]', $footer, $index); //Ìæ»»footerÄ£°å
+            $index = str_replace('[$include]', $include, $index); //Ìæ»»includeÄ£°å
+            echo $index;
+        } else {
+            echo 'È±ÉÙindexÄ£°å';
+        }
+        break;
+    case '/news': //ĞÂÎÅÄ£¿é
+        include('setting.php'); //ÒıÈëÍøÒ³±äÁ¿
+        $pnews = 'public/news.ht'; //newsÄ£°åÂ·¾¶
+        if (file_exists($pnews)) {
+            $news = file_get_contents($pnews); //ÔØÈë
+            $news = str_replace('[$head]', $head, $news); //Ìæ»»headÄ£°å
+            $news = str_replace('[$header]', $header, $news); //Ìæ»»headerÄ£°å
+            $news = str_replace('[$footer]', $footer, $news); //Ìæ»»footerÄ£°å
+            $news = str_replace('[$include]', $include, $news); //Ìæ»»includeÄ£°å
+            echo $news;
+        } else {
+            echo 'È±ÉÙnewsÄ£°å';
+        }
+        break;
+    case '/list': //ÁĞ±íÄ£¿é
+        include('setting.php'); //ÒıÈëÍøÒ³±äÁ¿
+        $plist = 'public/list.ht'; //listÄ£°åÂ·¾¶
+        if (file_exists($plist)) {
+            $list = file_get_contents($plist); //ÔØÈë
+            $list = str_replace('[$head]', $head, $list); //Ìæ»»headÄ£°å
+            $list = str_replace('[$header]', $header, $list); //Ìæ»»headerÄ£°å
+            $list = str_replace('[$footer]', $footer, $list); //Ìæ»»footerÄ£°å
+            $list = str_replace('[$include]', $include, $list); //Ìæ»»includeÄ£°å
+            echo $list;
+        } else {
+            echo 'È±ÉÙlistÄ£°å';
+        }
+        break;
+    case '/videos': //ÊÓÆµÄ£¿é
+        include('setting.php'); //ÒıÈëÍøÒ³±äÁ¿
+        $pvideos = 'public/videos.ht'; //videosÄ£°åÂ·¾¶
+        if (file_exists($pvideos)) {
+            $videos = file_get_contents($pvideos); //ÔØÈë
+            $videos = str_replace('[$head]', $head, $videos); //Ìæ»»headÄ£°å
+            $videos = str_replace('[$header]', $header, $videos); //Ìæ»»headerÄ£°å
+            $videos = str_replace('[$footer]', $footer, $videos); //Ìæ»»footerÄ£°å
+            $videos = str_replace('[$include]', $include, $videos); //Ìæ»»includeÄ£°å
+            echo $videos;
+        } else {
+            echo 'È±ÉÙvideosÄ£°å';
+        }
+        break;
+    case '/api': //ApiÄ£¿é
+        $p1 = $_GET['p1']; //Êı¾İÀàĞÍ
+        $id = $_GET['id']; //ID
+        $r1 = $_GET['r1']; //Status
+        header('Content-type: text/plain; charset=utf-8'); //·µ»ØÀàĞÍ£¨ÕâÀï±È½ÏÌØÊâ£©
+        $papi = 'static/api/' . $p1 . '/' . $id . '.js'; //Êı¾İÂ·¾¶£¨Ò»°ãÎªÏà¶ÔÂ·¾¶£¬¼æÈİºÃ£©
+        if (file_exists($papi)) {
+            $api = file_get_contents($papi); //ÔØÈë
+            $api = str_replace('[$r1]', $r1, $api); //Ìæ»»r1±äÁ¿
+            echo $api;
+        } else {
+            http_response_code(404);
+        }
+        break;
+    case '/snapi': //ÎÄÕÂApiÄ£¿é£¨¶ÔÓ¦¹Ù·½½Ó¿ÚsearchNews.php£©
+        $p0 = $_GET['p0']; //???
+        $id = $_GET['id']; //ID
+        header('Content-Type: text/plain; charset=utf-8'); //·µ»ØÀàĞÍ
+        $psnapi = 'static/api/searchNews/' . $id . '.js'; //Êı¾İÂ·¾¶
+        if (file_exists($psnapi)) {
+            $snapi = file_get_contents($psnapi); //ÔØÈë
+            echo $snapi;
+        } else {
+            http_response_code(404);
+        }
+        break;
+    case '/m': //ÊÖ»ú·ÃÎÊ
+        $pm = 'public/m.ht'; //mobileÄ£°åÂ·¾¶
+        if (file_exists($pm)) {
+            $m = file_get_contents($pm); //ÔØÈë
+            echo $m;
+        } else {
+            echo 'È±ÉÙmÄ£°å';
+        }
+        break;
+    default: //ÆäËüÂ·¾¶
+        http_response_code(404);
+    //break;
 }
-//æ–°é—»èµ„è®¯
-//èƒ¡æ¡ƒå½±é›†
+
+/*
+//Ö÷Ò³Ä£¿é
+if ($path == '' || $path == '/') {
+include('web.php'); //ÒıÈë¹«¹²±äÁ¿
+$pindex = 'public/newindex.ht'; //indexÄ£°åÂ·¾¶
+if (file_exists($pindex)) {
+$index = file_get_contents($pindex); //ÔØÈë
+$index = str_replace('[$head]', $head, $index); //Ìæ»»headÄ£°å
+$index = str_replace('[$footer]', $footer, $index); //Ìæ»»footerÄ£°å
+$index = str_replace('[$include]', $include, $index); //Ìæ»»includeÄ£°å
+echo $index;
+} else {
+echo 'È±ÉÙindexÄ£°å';
+}
+}
+//ĞÂÎÅÄ£¿é
+if ($path == '/news') {
+include('web.php'); //ÒıÈë¹«¹²±äÁ¿
+//$newsid = $_GET['newsid']; //ID
+$pnews = 'public/news.ht'; //newsÄ£°åÂ·¾¶
+if (file_exists($pnews)) {
+$news = file_get_contents($pnews); //ÔØÈë
+$news = str_replace('[$head]', $head, $news); //Ìæ»»headÄ£°å
+$news = str_replace('[$header]', $header, $news); //Ìæ»»headerÄ£°å
+$news = str_replace('[$footer]', $footer, $news); //Ìæ»»footerÄ£°å
+$news = str_replace('[$include]', $include, $news); //Ìæ»»includeÄ£°å
+echo $news;
+} else {
+echo 'È±ÉÙnewsÄ£°å';
+}
+}
+//ÁĞ±íÄ£¿é
+if ($path == '/list') {
+include('web.php'); //ÒıÈë¹«¹²±äÁ¿
+//$newsid = $_GET['newsid']; //ID
+$plist = 'public/list.ht'; //listÄ£°åÂ·¾¶
+if (file_exists($plist)) {
+$list = file_get_contents($plist); //ÔØÈë
+$list = str_replace('[$head]', $head, $list); //Ìæ»»headÄ£°å
+$list = str_replace('[$header]', $header, $list); //Ìæ»»headerÄ£°å
+$list = str_replace('[$footer]', $footer, $list); //Ìæ»»footerÄ£°å
+$list = str_replace('[$include]', $include, $list); //Ìæ»»includeÄ£°å
+echo $list;
+} else {
+echo 'È±ÉÙlistÄ£°å';
+}
+}
+//ÊÓÆµÄ£¿é
+if ($path == '/videos') {
+include('web.php'); //ÒıÈë¹«¹²±äÁ¿
+//$newsid = $_GET['newsid']; //ID
+$pvideos = 'public/videos.ht'; //videosÄ£°åÂ·¾¶
+if (file_exists($pvideos)) {
+$videos = file_get_contents($pvideos); //ÔØÈë
+$videos = str_replace('[$head]', $head, $videos); //Ìæ»»headÄ£°å
+$videos = str_replace('[$header]', $header, $videos); //Ìæ»»headerÄ£°å
+$videos = str_replace('[$footer]', $footer, $videos); //Ìæ»»footerÄ£°å
+$videos = str_replace('[$include]', $include, $videos); //Ìæ»»includeÄ£°å
+echo $videos;
+} else {
+echo 'È±ÉÙvideosÄ£°å';
+}
+}
+//ApiÄ£¿é
+if ($path == '/api') {
+//include('api.php'); //ÒıÈë¹«¹²±äÁ¿
+$p1 = $_GET['p1']; //Êı¾İÀàĞÍ
+$id = $_GET['id']; //ID
+$r1 = $_GET['r1']; //Status
+header('Content-type: text/plain; charset=utf-8'); //·µ»ØÀàĞÍ£¨ÕâÀï±È½ÏÌØÊâ£©
+$papi = 'static/api/' . $p1 . '/' . $id . '.js'; //Êı¾İÂ·¾¶£¨Ò»°ãÎªÏà¶ÔÂ·¾¶£¬¼æÈİºÃ£©
+if (file_exists($papi)) {
+$api = file_get_contents($papi); //ÔØÈë
+$api = str_replace('[$r1]', $r1, $api); //Ìæ»»r1±äÁ¿
+echo $api;
+} //else {
+//header('Content-type: text/html;charset=gbk'); //»Ö¸´±àÂë
+//echo '´ËÒ³ÃæÔİÎ´ÊÕÂ¼¡£';
+//echo 'Page Not Found'; //´Ë±àÂëÏÂ½ö¿ÉÏÔÊ¾Ó¢ÎÄ×Ö·û
+//}
+}
+*/
+//ÎÄÕÂApiÄ£¿é£¨¶ÔÓ¦searchNews.php£©
+/*if ($path == '/snapi') {
+    //include('api.php'); //ÒıÈë¹«¹²±äÁ¿
+    $p0 = $_GET['p0'];
+    $id = $_GET['id'];
+    header('Content-Type: text/plain; charset=utf-8'); //·µ»ØÀàĞÍ
+    $psnapi = 'static/api/' . $p1 . '/' . $id . '.js'; //Êı¾İÂ·¾¶
+}*/
+
+//¿Õ°×Ò³£¨×¼±¸ÖØ¹¹Âß¼­£©
+/*if ($path != '' && $path != '/' && $path != '/news' && $path != '/news' && $path != '/news') {
+    echo '<h1>Î´¶¨ÒåµÄÇëÇó</h1>';
+}*/
+/*
+//ÊÖ»ú·ÃÎÊ
+if ($path == '/m') {
+echo '<h1>ÇëÊ¹ÓÃµçÄÔ·ÃÎÊ¡£</h1>';
+/*
+//Ä£°åÂ·¾¶
+$file = 'public/news_detail.ht';
+//ÔØÈë
+if (file_exists($file)) {
+$str = file_get_contents($file); //½«Õû¸öÎÄ¼şÄÚÈİ¶ÁÈëµ½Ò»¸ö×Ö·û´®ÖĞ
+//$str = str_replace("\r\n", null, $str); //È¥³ı»»ĞĞ·û
+//$str = str_replace('[$r1]', $r1, $str); //Ìæ»»±äÁ¿
+echo $str;
+} else {
+echo '´ËÒ³ÃæÔİÎ´ÊÕÂ¼';
+}
+*/
+//}
+
+//£¨µ÷ÊÔ²ÎÊı£¬ÇëºöÂÔ£©
+//echo '<br>' . '$path: ' . $path . '<br>';
+//echo '$newsid: ' . $newsid . '<br>';
+//echo '$title: ' . $title . '<br>';
 ?>

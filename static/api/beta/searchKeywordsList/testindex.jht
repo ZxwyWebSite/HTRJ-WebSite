@@ -1,0 +1,14 @@
+var [$r1] = {
+  data: "",
+  from: "go",
+  msg: {
+    page: [$page],
+    pagesize: [$pagesize],
+    result: [
+[$result]
+    ],
+    total: [$total],
+    totalpage: [$totalpage],
+  },
+  status: 0,
+};
