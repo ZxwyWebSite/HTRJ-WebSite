@@ -1,0 +1,11 @@
+var searchObj = {
+  data: "",
+  from: "go",
+  msg: {
+    linkList: [
+[$linklist]
+    ],
+[$data]
+  },
+  status: 0,
+};

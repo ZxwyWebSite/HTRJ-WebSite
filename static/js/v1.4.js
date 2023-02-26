@@ -1364,7 +1364,7 @@ var fillNews = function(e) {
 
     function Br(t) {
         return new Vr(function(r, e) {
-            Qn("https://gicp.qq.com/wmp/data/js/v3/WMP_".concat("", "KEYWORDLIST_GW_").concat(t, ".js"), function() {
+            Qn("/wmp".concat("", "KEYWORDLIST_GW_").concat(t, ".js"), function() {
                 if ("undefined" != typeof window.keywordObj && "[object Array]" === Object.prototype.toString.call(window.keywordObj.msg)) {
                     for (var e = {}, t = 0; t < window.keywordObj.msg.length; t++) {
                         var n = window.keywordObj.msg[t];
@@ -1437,7 +1437,7 @@ var fillNews = function(e) {
     } || function(e) {
         Dr(e, 0)
     }, Vr._unhandledRejectionFn = function(e) {
-        "undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", e)
+        //"undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", e)
     };
     var Xr, Kr, Yr, Qr;
     Xr = "keys", Kr = function() {
@@ -1552,7 +1552,7 @@ var fillNews = function(e) {
         var e = "",
             t = "",
             n = Qn;
-        if ("string" == typeof l.rank) l.rank.match(/-d$/) || ("news" !== l._newsType && (l.newsType = "video"), e = "".concat(l.protocol, "//gicp.qq.com/wmp/data/js/v3/WMP_").concat("video" === l.newsType ? "" : "NEWS_", "RANKLIST_GW_").concat(l.gameID, ".js"), t = "video" === l.newsType ? "rankObj" : "newsRankObj");
+        if ("string" == typeof l.rank) l.rank.match(/-d$/) || ("news" !== l._newsType && (l.newsType = "video"), e = "".concat(l.protocol, "/wmp").concat("video" === l.newsType ? "" : "NEWS_", "RANKLIST_GW_").concat(l.gameID, ".js"), t = "video" === l.newsType ? "rankObj" : "newsRankObj");
         else if ("search" === l.type) {
             var r = Jr(l.id);
             if ("" === r) return;
@@ -1570,7 +1570,7 @@ var fillNews = function(e) {
             })
         } else {
             var i;
-            if ("cross" === l.newsType) e = Or(l.protocol + "//apps.game.qq.com/cmc/cross", (Un(i = {
+            if ("cross" === l.newsType) e = Or(l.protocol + "/cross", (Un(i = {
                 serviceId: l.gameID,
                 filter: "iTag" === l.type ? "tag" : "channel"
             }, "iTag" === l.type ? "tagids" : "chanid", l.id), Un(i, "typeids", "1,2"), Un(i, "source", l.source), Un(i, "logic", "or"), Un(i, "sortby", l.sortby || l.order), Un(i, "limit", l.pageSize), Un(i, "start", (l.page - 1) * l.pageSize), Un(i, "stime", l.stime), Un(i, "etime", l.etime), i)), n = Zn;
@@ -1811,12 +1811,13 @@ var fillNews = function(e) {
                 /*f = o.protocol + "//apps.game.qq.com/wmp/v3.1/public/searchNews.php",*/
                 f = o.protocol + "/snapi?",
                 /*d = o.protocol + "//apps.game.qq.com/wmp/v3.1/public/search.php";*/
-                d = o.protocol + "//apps.game.qq.com/wmp/v3.1/public/search.php";
+                d = o.protocol + "/sapi?";
             if ("video" === s) a = o.id, e = d;
             else if ("news" === s) a = o.id, e = f;
             else if (l) s = "video", a = l[1], e = d;
             else {
-                if (!t) return void console.warn("url\u4e2d\u672a\u53d1\u73b0 newsid/videoid");
+                //if (!t) return void console.warn("url\u4e2d\u672a\u53d1\u73b0 newsid/videoid");
+                if (!t) return void window.location.replace("/");
                 s = "news", a = t[1], e = f
             }
             Qn("".concat(e, "p0=").concat(r, "&source=").concat(n, "&id=").concat(a), function() {

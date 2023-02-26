@@ -266,7 +266,8 @@ $('.kv-video').click(function() {
 $('.close_btn').click(function() {
     $('.mod_player_box,.mod_layer').hide();
     $('#mod_player').html('');
-    player.pause();
+    //player.pause();
+    player.destroy();
 })
 
 //¸´ÖÆ
