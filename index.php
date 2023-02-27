@@ -1,7 +1,7 @@
 <?php
 //《胡桃日记官网》 - php版本 ; By Zxwy ; 主程序
 $urlpath = $_SERVER['PHP_SELF']; //访问路径
-$path = str_replace('/index.php', null, $urlpath); //去除urlpath中的php文件名
+$path = str_replace($_SERVER['SCRIPT_NAME'], null, $urlpath); //去除urlpath中的php文件名
 header('Content-type: text/html;charset=gbk'); //定义返回类型
 
 //2023-02-24 重写模块，重构逻辑，优化执行效率
@@ -71,7 +71,7 @@ switch ($path) {
         $id = $_GET['id']; //唯一识别码
         header('Content-type: text/plain; charset=utf-8'); //返回类型
         $papi = 'static/api/beta/' . $p1 . '/'; //Api主目录
-        if (file_exists($papi . 'testindex.jht')) {
+        if (file_exists($papi . 'testindex.jht') && $p1) {
             $jht = file_get_contents($papi . 'testindex.jht'); //载入主模板
             if (file_exists($papi . $id . '/setting.php')) {
                 include($papi . $id . '/setting.php');
@@ -138,8 +138,30 @@ switch ($path) {
             echo '缺少m模板';
         }
         break;
+    case '/favicon.ico': //图标重定向
+        $picon = 'static/favicon.ico';
+        if (file_exists($picon)) {
+            header('Content-Type: image/x-icon');
+            echo file_get_contents($picon);
+        } else {
+            http_response_code(404);
+        }
+        break;
     default: //其它路径
+        /*$isimg = strstr($path,'/static/api/img/'); //图片CDN
+        if ($isimg) {
+            $img = str_replace('/static/api/img/', null, $path);
+            header("Location: https://b2eu.zw-cdn.tk/gh/htrj-website/img/$img");
+            break;
+        }
+        $isvod = strstr($path,'/static/api/vod/'); //视频CDN
+        if ($isvod) {
+            $vod = str_replace('/static/api/vod/', null, $path);
+            header("Location: https://b2eu.zw-cdn.tk/gh/htrj-website/vod/$vod");
+            break;
+        }*/
         http_response_code(404);
+        //echo $path;
     //break;
 }
 ?>
